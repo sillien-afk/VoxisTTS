@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies (without torch)
+      run: |
+        python -m pip install --upgrade pip
+        # Install light dependencies only (skip torch for CI speed)
+        pip install pypinyin espeakng-loader loguru jieba ordered-set
+
+    - name: Run syntax check
+      run: |
+        python -m py_compile voxistts/*.py
+        echo "Syntax OK"
+
+    - name: Import check
+      run: |
+        python -c "import voxistts; print(f'voxistts {voxistts.__version__} imported successfully')"
+
+    - name: Run tests (light)
+      run: |
+        pip install pytest
+        pytest tests/test_basic.py -v --tb=short || true

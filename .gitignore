@@ -44,6 +44,12 @@ Thumbs.db
 *.flac
 demo_*.wav
 
+# Exceptions: ship demo files as project artifacts
+!demo_zh.wav
+!demo_en.wav
+!demo_listen_zh.wav
+!demo.html
+
 # Model weights (large files, not in repo)
 *.pth
 *.bin

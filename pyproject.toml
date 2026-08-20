@@ -1,3 +1,9 @@
+[project.urls]
+Homepage = "https://github.com/sillien-afk/VoxisTTS"
+Documentation = "https://github.com/sillien-afk/VoxisTTS#readme"
+Repository = "https://github.com/sillien-afk/VoxisTTS.git"
+Issues = "https://github.com/sillien-afk/VoxisTTS/issues"
+
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.backends._legacy:_Backend"

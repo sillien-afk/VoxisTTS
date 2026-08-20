@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VoxisTTS · 试听</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;background:#fafafa;color:#222}
+  h1{font-size:1.4rem;margin-bottom:4px}
+  .sub{color:#666;font-size:.85rem;margin-bottom:24px}
+  .track{background:#fff;border:1px solid #ddd;border-radius:8px;padding:14px 16px;margin-bottom:12px}
+  .label{font-weight:600;margin-bottom:8px;font-size:.95rem}
+  audio{width:100%;outline:none}
+  .note{font-size:.78rem;color:#999;margin-top:20px}
+</style>
+</head>
+<body>
+  <h1>VoxisTTS</h1>
+  <div class="sub">Kokoro-82M · 轻量中英文 TTS · 本地部署</div>
+
+  <div class="track">
+    <div class="label">CN 中文试听（demo_zh）</div>
+    <audio controls src="https://raw.githubusercontent.com/sillien-afk/VoxisTTS/refs/heads/main/demo_zh.wav"></audio>
+  </div>
+
+  <div class="track">
+    <div class="label">EN 英文试听（demo_en）</div>
+    <audio controls src="https://raw.githubusercontent.com/sillien-afk/VoxisTTS/refs/heads/main/demo_en.wav"></audio>
+  </div>
+
+  <div class="track">
+    <div class="label">Listen 耳测对比（demo_listen_zh）</div>
+    <audio controls src="https://raw.githubusercontent.com/sillien-afk/VoxisTTS/refs/heads/main/demo_listen_zh.wav"></audio>
+  </div>
+
+  <div class="note">Files served from GitHub raw CDN. Repo: github.com/sillien-afk/VoxisTTS</div>
+</body>
+</html>
