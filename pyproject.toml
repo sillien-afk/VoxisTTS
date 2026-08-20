@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "voxistts"
+version = "0.1.0"
+description = "Lightweight Chinese-English TTS based on Kokoro-82M architecture"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "in-house"}]
+keywords = ["tts", "text-to-speech", "kokoro", "chinese", "english"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+dependencies = [
+    "torch>=2.0",
+    "scipy>=1.10",
+    "transformers>=4.30",
+    "huggingface-hub>=0.16",
+    "pypinyin>=0.44",
+    "espeakng-loader>=0.2",
+    "loguru>=0.7",
+    "jieba>=0.42",
+    "ordered-set>=4.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "soundfile>=0.12",
+]
+
+[project.scripts]
+voxistts = "voxistts.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["voxistts*"]
+
+[tool.setuptools.package-data]
+voxistts = ["*.txt", "*.json"]

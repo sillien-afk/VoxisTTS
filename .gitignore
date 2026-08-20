@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Demo audio files
+*.wav
+*.mp3
+*.flac
+demo_*.wav
+
+# Model weights (large files, not in repo)
+*.pth
+*.bin
+*.pt
+voices/
+kokoro-82m/
+llm_models/
+
+# Tool references and test outputs
+tools/reference/
+tools/*.wav
+cache/
+
+# Local config / secrets
+config/
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
