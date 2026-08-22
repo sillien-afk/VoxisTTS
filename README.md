@@ -4,13 +4,14 @@ Python 包：`pip install voxistts`
 
 ## 在线试听
 
-**🎧 点击访问在线播放器：[demo.html](https://sillien-afk.github.io/VoxisTTS/)**
+**[🎵 点击播放音频](https://sillien-afk.github.io/VoxisTTS/demo.html)**
 
-> 在浏览器中打开可实时播放三个 demo 音频（中文/英文/耳测对比）
+> 浏览器内直接播放三个 demo 音频（中文 / 英文 / 耳测对比），无需下载
 
-如果上面的链接打不开，也可以：
-- 直接下载 wav 文件播放（见下方下载链接）
-- 本地运行：`python -m voxistts "你好世界" -v zf_xiaoxiao -o out.wav`
+如果链接打不开，本地运行：
+```bash
+python -m voxistts "你好世界" -v zf_xiaoxiao -o out.wav
+```
 
 ## 安装
 
